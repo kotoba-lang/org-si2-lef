@@ -4,7 +4,7 @@
   DEF). Extracted from kotoba-lang/pdk into its own standards-substrate repo
   as part of the kotoba-lang org-<body>-<spec> reverse-domain naming
   initiative (ADR-2607072500, com-junkawasaki/root)."
-  (:require [clojure.string :as str]))
+  (:require [kotoba.lang.text :as str]))
 
 (def macro-classes #{:core :block :pad :endcap})
 
@@ -54,7 +54,7 @@
               (if (and current-macro (>= n 2))
                 (recur more macros
                        (assoc current-macro :class
-                              (case (str/upper-case (nth tokens 1))
+                              (case (str/upper (nth tokens 1))
                                 "BLOCK" :block "PAD" :pad "ENDCAP" :endcap :core))
                        current-pin in-obs current-layer)
                 (recur more macros current-macro current-pin in-obs current-layer))
