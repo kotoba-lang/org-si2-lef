@@ -23,5 +23,5 @@ Consumed by `kotoba-lang/pdk` for standard-cell physical-abstract lookups.
 ## Develop
 
 ```bash
-clojure -M:test
+kbb -M:test
 ```
