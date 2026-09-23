@@ -1,5 +1,5 @@
 (ns lef.core-test
-  (:require [clojure.test :refer [deftest is testing]]
+  (:require [kotoba.test :refer [deftest is testing]]
             [lef.core :as lef]))
 
 ;; mirrors pdk's `lef-parse-basic` (originally `lef_parse_basic`)
